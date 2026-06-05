@@ -1,4 +1,5 @@
 package instances;
 
-public class Video {
+public class Video extends Media {
+
 }
