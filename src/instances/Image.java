@@ -8,7 +8,6 @@ public class Image extends Media implements Showed {
         super(brightness, title);
     }
 
-
     @Override
     public void lowerBrightness() {
         super.lowerBrightness();
@@ -22,6 +21,14 @@ public class Image extends Media implements Showed {
     @Override
     public void show() {
         System.out.println(title + "*".repeat(brightness));
+    }
+
+    @Override
+    public String toString() {
+        return "Image{" +
+                "brightness=" + brightness +
+                ", title='" + title + '\'' +
+                '}';
     }
 }
 

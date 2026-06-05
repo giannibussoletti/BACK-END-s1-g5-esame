@@ -26,5 +26,12 @@ public class Audio extends Media implements Playable {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Audio{" +
+                "duration=" + duration +
+                ", volume=" + volume +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }

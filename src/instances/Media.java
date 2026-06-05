@@ -47,6 +47,10 @@ public abstract class Media {
     }
 
     // Volume
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
     public void lowerVolume() {
         if (volume > 0) {
             --volume;
@@ -62,7 +66,7 @@ public abstract class Media {
             System.out.println("La luminosità è già al massimo");
         }
     }
-    
+
 
     @Override
     public String toString() {
