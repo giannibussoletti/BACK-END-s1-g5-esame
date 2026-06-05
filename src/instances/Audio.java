@@ -1,4 +1,6 @@
 package instances;
 
-public class Audio {
+public class Audio extends Media {
+
+
 }
