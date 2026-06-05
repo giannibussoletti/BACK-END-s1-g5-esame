@@ -11,6 +11,11 @@ public class Video extends Media implements Playable {
     }
 
     @Override
+    public void setVolume(int volume) {
+        super.setVolume(volume);
+    }
+
+    @Override
     public void upperBrightness() {
         super.upperBrightness();
     }
@@ -38,5 +43,13 @@ public class Video extends Media implements Playable {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Video{" +
+                "duration=" + duration +
+                ", volume=" + volume +
+                ", brightness=" + brightness +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }
