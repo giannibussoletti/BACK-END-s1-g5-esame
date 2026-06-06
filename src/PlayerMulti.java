@@ -3,7 +3,6 @@ import instances.Image;
 import instances.Media;
 import instances.Video;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class PlayerMulti {
@@ -13,7 +12,17 @@ public class PlayerMulti {
         System.out.println("Creiamo la tua playlistMix");
         for (int i = 0; i < medias.length; i++) {
             System.out.println("Cosa vuoi creare? 1 Video, 2 Audio, 3 Immagine");
-            int choice = Integer.parseInt(scanner.nextLine());
+            int choice = 0;
+            while (true) {
+                int choiceWhile = Integer.parseInt(scanner.nextLine());
+                if ((choiceWhile < 1) || (choiceWhile > 3)) {
+                    System.out.println("Valore non valido");
+                    System.out.println("Cosa vuoi creare? 1 Video, 2 Audio, 3 Immagine");
+                } else {
+                    choice = choiceWhile;
+                    break;
+                }
+            }
             switch (choice) {
                 case 1 -> {
                     System.out.println("Creiamo un video");
@@ -91,7 +100,7 @@ public class PlayerMulti {
                             break;
                         }
                     }
-                    System.out.println("Quanto dura il audio (max 15 sec)");
+                    System.out.println("Quanto dura l'audio (max 15 sec)");
                     int totalTime = 0;
                     while (true) {
                         int time = Integer.parseInt(scanner.nextLine());
@@ -156,7 +165,27 @@ public class PlayerMulti {
             }
 
         }
-        System.out.println(Arrays.toString(medias));
+        System.out.println("Bene, abbiamo creato la tua playlist, scegli cosa vuoi vedere o ascoltare!");
+        while (true) {
+            System.out.println("Dammi un numero da 1 a 5, (9 per uscire)");
+
+            int arrayChoice = Integer.parseInt(scanner.nextLine());
+            if (arrayChoice == 9) {
+                System.out.println("Ci vediamo!");
+                break;
+            } else if (arrayChoice < 1 || arrayChoice > 5) {
+                System.out.println("Valore non valido");
+            } else {
+                --arrayChoice;
+                if (medias[arrayChoice] instanceof Image image) {
+                    image.show();
+                } else if (medias[arrayChoice] instanceof Audio audio) {
+                    audio.play();
+                } else if (medias[arrayChoice] instanceof Video video) {
+                    video.play();
+                }
+            }
+        }
     }
 
 
