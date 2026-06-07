@@ -9,4 +9,12 @@ public class Merchant extends Character {
         this.wealth = wealth;
         this.nOfObjects = nOfObjects;
     }
+
+    @Override
+    public String toString() {
+        return "Merchant{" +
+                "Nome: " + name + '\n' +
+                "Ricchezza: " + wealth + '\n' +
+                "Totale Oggetti: " + nOfObjects;
+    }
 }

@@ -6,6 +6,7 @@ public class Character {
     protected int totalEnergy;
     protected int actualLevel;
 
+
     //Method
     public void showState() {
     }
@@ -13,5 +14,13 @@ public class Character {
     public int takeDamage(int actualDamage) {
         int damageTaken = actualDamage / 5;
         return totalEnergy -= damageTaken;
+    }
+
+    @Override
+    public String toString() {
+        return "Character:\n" +
+                "Name: " + name + '\n' +
+                "Energia totale:" + totalEnergy + "\n" +
+                "Livello:" + actualLevel;
     }
 }
