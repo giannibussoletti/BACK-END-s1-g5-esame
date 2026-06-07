@@ -5,8 +5,16 @@ public class Warrior extends Character {
     protected int resistance;
 
 
+    public Warrior(String name, int totalEnergy, int actualLevel, int strength, int resistance) {
+        this.name = name;
+        this.totalEnergy = totalEnergy;
+        this.actualLevel = actualLevel;
+        this.strength = strength;
+        this.resistance = resistance;
+    }
+
     public void trainingMethod() {
-        ++resistance;
+        resistance++;
     }
 
     public int attackDamage() {
@@ -16,5 +24,13 @@ public class Warrior extends Character {
     @Override
     public int takeDamage(int actualDamage) {
         return super.takeDamage(actualDamage);
+    }
+
+    @Override
+    public String toString() {
+        return "Warrior{" +
+                super.toString() + "\n" +
+                "Forza: " + strength + "\n" +
+                "Resistenza:" + resistance + "\n";
     }
 }

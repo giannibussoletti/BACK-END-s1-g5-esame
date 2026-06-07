@@ -25,4 +25,12 @@ public class Wizard extends Character {
     public int takeDamage(int actualDamage) {
         return super.takeDamage(actualDamage);
     }
+
+    @Override
+    public String toString() {
+        return "Wizard{" +
+                "} " + super.toString() + "\n" +
+                "Potere: " + magicalPower + "\n" +
+                "Mana: " + mana;
+    }
 }
