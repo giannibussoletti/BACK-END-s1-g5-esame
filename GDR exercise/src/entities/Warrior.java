@@ -33,9 +33,9 @@ public class Warrior extends Character {
 
     @Override
     public String toString() {
-        return "Warrior{" +
+        return "\nGuerriero\n" +
                 super.toString() + "\n" +
                 "Forza: " + strength + "\n" +
-                "Resistenza:" + resistance + "\n";
+                "Resistenza: " + resistance + "\n";
     }
 }

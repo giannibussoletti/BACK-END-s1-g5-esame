@@ -27,9 +27,8 @@ public abstract class Character {
 
     @Override
     public String toString() {
-        return "Character:\n" +
-                "Name: " + name + '\n' +
-                "Energia totale:" + totalEnergy + "\n" +
-                "Livello:" + actualLevel;
+        return "Nome: " + name + '\n' +
+                "Energia totale: " + totalEnergy + "\n" +
+                "Livello: " + actualLevel;
     }
 }

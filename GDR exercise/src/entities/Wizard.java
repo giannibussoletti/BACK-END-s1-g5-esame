@@ -33,8 +33,8 @@ public class Wizard extends Character {
 
     @Override
     public String toString() {
-        return "Wizard{" +
-                "} " + super.toString() + "\n" +
+        return "\nMago\n" +
+                super.toString() + "\n" +
                 "Potere: " + magicalPower + "\n" +
                 "Mana: " + mana;
     }
