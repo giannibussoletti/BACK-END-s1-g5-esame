@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b40a28c-2830-409f-8ff7-6ef0ba1a364b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CombatField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CombatField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Merchant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Warrior.java" afterDir="false" />
@@ -55,6 +56,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CombatField.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -69,6 +71,20 @@
     "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="CombatField" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CombatField" />
+      <module name="GDR exercise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CombatField" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -89,5 +105,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

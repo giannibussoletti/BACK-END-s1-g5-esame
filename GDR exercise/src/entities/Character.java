@@ -1,6 +1,6 @@
 package entities;
 
-public class Character {
+public abstract class Character {
     //Attributes
     protected String name;
     protected int totalEnergy;
@@ -9,11 +9,20 @@ public class Character {
 
     //Method
     public void showState() {
+        System.out.println(name + " ha " + totalEnergy + " di energia totale rimanente");
     }
 
     public int takeDamage(int actualDamage) {
         int damageTaken = actualDamage / 5;
         return totalEnergy -= damageTaken;
+    }
+
+    public int getTotalEnergy() {
+        return totalEnergy;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
