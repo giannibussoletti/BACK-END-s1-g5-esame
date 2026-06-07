@@ -3,12 +3,13 @@ import entities.Merchant;
 import entities.Warrior;
 import entities.Wizard;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CombatField {
     static void main() {
 
-        Character[] characters = new Character[4];
+        Character[] characters = new Character[2];
         Scanner scanner = new Scanner(System.in);
 //        Warrior warrior = new Warrior("Ciao", 100, 20, 10, 20);
         System.out.println("Andiamo in battaglia");
@@ -49,10 +50,11 @@ public class CombatField {
                 }
             }
         }
+        System.out.println(Arrays.toString(characters));
         System.out.println("Scegli il tuo primo combattente\n(ricorda che i mercanti non possono difendersi)\ndimmi un numero da 1 a 4");
-        int firstChoice = (scanner.nextInt() + 1);
+        int firstChoice = (scanner.nextInt() - 1);
         System.out.println("Scegli il tuo secondo combattente\ndimmi un numero da 1 a 4");
-        int secondChoice = (scanner.nextInt() + 1);
+        int secondChoice = (scanner.nextInt() - 1);
         while (true) {
             int attackDamage = 0;
 
@@ -79,6 +81,16 @@ public class CombatField {
                 merchant.takeDamage(attackDamage);
                 merchant.showState();
             }
+            if (characters[firstChoice].getTotalEnergy() <= 0 || characters[secondChoice].getTotalEnergy() <= 0) {
+                System.out.println("La battaglia è finita");
+                if (characters[firstChoice].getTotalEnergy() > characters[secondChoice].getTotalEnergy()) {
+                    System.out.println(characters[firstChoice].getName() + " vince la battaglia");
+                } else {
+                    System.out.println(characters[secondChoice].getName() + " vince la battaglia");
+                }
+                break;
+            }
+
             if (characters[firstChoice] instanceof Wizard wizard) {
                 wizard.takeDamage(secondAttackDamage);
                 wizard.showState();

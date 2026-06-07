@@ -17,7 +17,7 @@ public class Merchant extends Character {
 
     @Override
     public String toString() {
-        return "Merchant{" +
+        return "\nMercante\n" +
                 "Nome: " + name + '\n' +
                 "Ricchezza: " + wealth + '\n' +
                 "Totale Oggetti: " + nOfObjects;
