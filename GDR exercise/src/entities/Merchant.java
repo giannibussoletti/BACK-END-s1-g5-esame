@@ -11,6 +11,11 @@ public class Merchant extends Character {
     }
 
     @Override
+    public void showState() {
+        super.showState();
+    }
+
+    @Override
     public String toString() {
         return "Merchant{" +
                 "Nome: " + name + '\n' +

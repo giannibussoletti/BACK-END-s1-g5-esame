@@ -22,6 +22,11 @@ public class Wizard extends Character {
     }
 
     @Override
+    public void showState() {
+        super.showState();
+    }
+
+    @Override
     public int takeDamage(int actualDamage) {
         return super.takeDamage(actualDamage);
     }
